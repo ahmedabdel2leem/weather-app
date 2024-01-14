@@ -8,7 +8,7 @@
 body {
   background-color: var(--bg-parent);
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
@@ -46,7 +46,7 @@ body {
   100% {
     transform: rotate(360deg);
 }
-} */
+}
 
 #myNavbar {
   height: 100vh;
@@ -521,13 +521,6 @@ color: #fff;
   position: static !important;
 }
 }
-
-/* If the screen size is 600px or less, set the font-size of <div> to 30px */
-
-
-
-
-
 
 
 

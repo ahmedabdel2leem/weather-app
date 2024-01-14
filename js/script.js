@@ -20,9 +20,9 @@ const getData = async (location, geo) => {
     }
     console.log(url.json)
     console.log(url.status)
-    // if(url.status == 200){
-    //   loadingIndicator.style.display = "none";
-    // }
+    if(url.status == 200){
+      loadingIndicator.style.display = "none";
+    }
 
     _tomorrow = data.forecast.forecastday[1].hour;
 
