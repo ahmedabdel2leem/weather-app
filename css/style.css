@@ -1,0 +1,540 @@
+:root {
+  --bg-parent: #252525;
+  --primary-color: #272727;
+  --box-shadow: 0 0rem 3rem rgba(0, 0, 0, 1.4);
+}
+/* map card removing */
+
+body {
+  background-color: var(--bg-parent);
+}
+/* ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 500px;
+}
+
+
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  background-color: #131214;
+  z-index: 10000;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+}
+} */
+
+#myNavbar {
+  height: 100vh;
+      position: sticky;
+      z-index: 999;
+      top: 0;
+      bottom: 0;
+
+  .nav {
+    height: 100%;
+    position: sticky;
+    box-shadow: var(--box-shadow);
+    background-color: var(--primary-color);
+  }
+  .logo{
+   width: 50px;
+  }
+
+  li{
+    margin-block: 10px;
+    transition: all .2s;
+    /* padding-block: 10px; */
+    
+    border-radius: 50%;
+    padding: 6px;
+  }
+  ul .active{
+    position: relative;
+   
+    background-image: linear-gradient(132deg, #d3269c, #fe3061, #f9754e);
+  }
+  ul .active:after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 98%;
+    background-color: transparent;
+    height: 10px;
+    width: 15px;
+    border: 10px transparent 5px #d3269c;
+    transform: translateY(-30%);
+    border-right: 5px solid transparent;
+    border-bottom: 16px solid #fe3061;
+    border-left: 4px solid transparent;
+    transform: rotate(90deg);
+
+  }
+  ul .active::before{
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: 98%;
+    height: 10px;
+    width: 15px;
+    border: 10px transparent 5px #d3269c;
+    transform: translateY(-30%);
+    border-right: 5px solid transparent;
+    border-bottom: 16px solid #fe3061;
+    border-left: 4px solid transparent;
+    transform: rotate(270deg);
+  }
+}
+
+.search {
+  display: flex;
+  padding-left: 15px;
+  border-radius: 20px;
+  align-items: baseline;
+  box-shadow: var(--box-shadow) !important;
+
+  #searchInput {
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: none;
+    border-radius: 20px;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: transparent !important;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    color-adjust: exact !important;
+  }
+
+  #searchInput:focus,
+  #searchInput:hover,
+  #searchInput:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: transparent !important;
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    color-adjust: exact !important;
+  }
+
+  label {
+    background-color: var(--primary-color);
+  }
+}
+
+.basicData {
+  color: #fff;
+
+  img {
+    filter: drop-shadow(9px 14px 7px #000a);
+  }
+
+  .cloud-img {
+    left: 0;
+    transform: translateY(-49%);
+    width: 190px;
+  }
+
+  .dayData {
+    margin-top: 20px;
+    display: flex;
+    align-items: baseline;
+
+    .c-name {
+      width: 50%;
+
+      h3 {
+        font-size: clamp(1rem,7vw,1.7rem);;;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+
+      span {
+        font-size: .7rem;
+      }
+    }
+
+    .temp {
+      width: 50%;
+
+      p {
+        margin: 0;
+      }
+
+      .c-temp {
+        position: relative;
+        width: fit-content;
+        margin-right: auto !important;
+        font-size: 7rem;
+        font-weight: 500;
+        line-height: 1;
+        background-image: linear-gradient(to right, #fff 0%, #ffffff59 50%, #fbfbfb 50%, #ffffff6b 75%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .c-temp::after {
+        content: 'o';
+        font-weight: 700;
+        font-size: 3rem;
+        position: absolute;
+        top: 0;
+        right: -30px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, #fbfbfb94 50%, #ffffff4d 75%);
+      }
+
+      .maxmin>span {
+        margin-right: 4px;
+        font-size: .7rem;
+      }
+    }
+  }
+
+  .rains-data {
+    font-size: .8rem;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: 35px;
+
+    .data {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+    }
+  }
+
+}
+
+.daysB {
+  .nav-tabs {
+    border-bottom: none;
+
+    .nav-link:nth-child(1),
+    .nav-link:nth-child(2) {
+      position: relative;
+      border: none;
+      color: #464545;
+      font-weight: 400;
+      padding-inline: 5px;
+      transition: all .3s;
+    }
+
+    .nav-link:nth-child(1),
+    .nav-link:nth-child(2) {
+      background-color: transparent !important;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .nav-link:nth-child(1).active::after,
+    .nav-link:nth-child(2).active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      background-color: #fff;
+      width: 10px;
+      height: 2px;
+      transform: translateX(-50%);
+    }
+
+  }
+  .shapes {
+    width: 62px;
+    height: 102px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    filter: drop-shadow(7px 0px 7px #000a);
+    clip-path: ellipse(210px 69px at 178px);
+  }
+
+  .shapes.active {
+    background-image: linear-gradient(132deg, #d3269c, #fe3061, #f9754e);
+  }
+
+}
+
+.about {
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+  .condations {
+  .cond {
+    span{
+      font-size: .8rem;
+    }
+  }
+}
+
+.shape2{
+  width: 95%;
+    height: 329px;
+    border-radius: 91px;
+    transform: rotate3d(16, 7, 0, 39deg);
+    position: absolute;
+    top: -178px;
+    left: 0;
+    background: linear-gradient(142deg, #d4269b 30%, #fe2e62,#f9774d 100%);
+}
+.countryData{
+
+  .contryName{
+    font-size:  clamp(1.5rem,5vw,2rem);;
+  }
+  .c-temp{
+    position: relative;
+    font-size: clamp(3rem,5vw,5rem);
+    font-weight: 500;
+    line-height: 1;
+    background-image: linear-gradient(to right, #fff 0%, #ffffff59 50%, #fbfbfb 50%, #ffffff6b 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .c-temp::after {
+    content: 'o';
+    font-weight: 700;
+    font-size:clamp(1.7rem,5vw,.5rem);
+    position: absolute;
+    top: 0;
+    right: -20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #ffffffc2 50%, #ffffff80 75%);
+  
+  }
+  .maxmin{
+    /* line-height: 3; */
+    font-size: clamp(.5rem ,5vw,.9rem);
+  }
+ 
+}
+.cloudImg  {
+  width: 160px;
+  left: -22px;
+  top: 60%;
+  transform: translateY(-60px);
+  img{
+    position: absolute;
+
+  }
+}
+.days-row{
+  overflow: hidden;
+    display: flex;
+    justify-content: end;
+}
+.days .col-md-6{
+  transform-origin: right center;
+  border-radius: 44px 7px 19px 13px;
+
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.days .col-md-6 .day{
+  font-size: .8rem;
+  font-weight: 500;
+  span{
+    font-size: .6rem;
+  }
+}
+.days  .active{
+  background: linear-gradient(142deg, #d4269b 30%, #fe2e62,#f9774d 100%);
+}
+
+}
+
+
+.heat-map{
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+iframe {
+  margin-top: -90px;
+  margin-left: -25%;
+  filter:grayscale(100%) invert(86%)
+}
+.overlay{
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+position: absolute;
+color: #fff;
+
+.location{
+  font-size: .9rem;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 20px;
+  background:rgba(51, 51, 51, 0.808);  
+  border-bottom-right-radius: 20px;
+  span{
+    font-size: .8rem;
+    color: rgb(160, 160, 160);
+  }
+}
+.pre{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 5px;
+  transform: translateY(-50%);
+  background:rgba(51, 51, 51, 0.925);  
+  border-radius: 0px 30px 30px 0px;
+  .prec{
+    padding-block: 10px;
+  }
+
+
+  .fa-solid{
+    font-size: 1rem;
+    color: rgb(185, 185, 185);
+  }
+  span{
+    font-weight: 500;
+    font-size: .6rem;
+  }
+  
+}
+.active{
+  position: relative;
+  color: #fff;
+  .fa-solid{
+    color: #fff;
+  }
+}
+
+
+.active::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.prec-bar{
+  position: absolute;
+  top: 93%;
+  /* transform: translateY(-90%); */
+  left: 50%;
+  transform: translate(-50%,-93%);
+  background:rgba(51, 51, 51, 0.925);  
+  width: 300px;
+  padding: 5px 15PX;
+  border-radius: 20px;
+  .master{
+    position: relative;
+    font-size: .7rem;
+    color: #fff;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  .master::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(45deg, #45807c,#13c6b9, #0cd790);
+  }
+  .degree{
+    font-size: .7rem;
+  }
+  .degree span{
+    position: relative;
+  }
+  .degree span::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 2px;
+    background-color: #fff;
+  }
+
+}
+
+}
+
+#nav-Tommorow .row  .active{
+  background-image:unset
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .top-parent {
+   display: block  !important;
+}
+#myNavbar{
+  height: 60px;
+  position: static;
+  flex-direction: row-reverse;
+}
+.container-fluid .row .left-side{
+  position: static !important;
+}
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
