@@ -2,6 +2,7 @@ let data = [];
 let _tomorrow = [];
 let navElement  = document.querySelectorAll('#myNavbar li');
 const loadingIndicator = document.getElementById("loadingIndicator");
+const buttons = document.querySelectorAll('.pre .prec');
 
 let currentTime;
 // get the data from the api
