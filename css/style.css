@@ -189,7 +189,7 @@ body {
         position: relative;
         width: fit-content;
         margin-right: auto !important;
-        font-size: 7rem;
+        font-size: 6rem;
         font-weight: 500;
         line-height: 1;
         background-image: linear-gradient(to right, #fff 0%, #ffffff59 50%, #fbfbfb 50%, #ffffff6b 75%);
@@ -597,6 +597,16 @@ img:nth-child(3){
 .container-fluid .row .left-side{
   position: static !important;
 }
+}
+@media  (min-width: 992px) and (max-width:1122px) {
+      .temp .c-temp{
+        font-size: 3rem !important;
+      }
+      .contry-left .rains-data {
+      bottom: 24px !important;
+      right: 10px !important;
+      }
+
 }
 
 
