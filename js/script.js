@@ -51,7 +51,7 @@ function getLocation() {
     function (error) {
       if (error.code === error.PERMISSION_DENIED) {
         // Geolocation access is denied, call getData with default location 'cairo'
-        getData('cairo');
+        getData('mumbai');
       } else {
         console.error("Error getting geolocation:", error);
       }
@@ -75,7 +75,7 @@ document.getElementById('searchInput').addEventListener('input', async function 
 
 
 function displayData() {
-
+  document.querySelector('.preeNumber span:nth-child(1)').innerHTML = data.current.pressure_mb;
   let country_left = `
   
 <img class=" cloud-img position-absolute top-50 " src="${data.current.condition.icon}" alt="">
@@ -531,9 +531,14 @@ function calculateAQI(co, no2, o3, so2, pm25, pm10) {
 
     return overallAQI;
   }
+function rainy_countrys(totalpre){
+ 
+}
 
-  // Example usage with provided values
 
 
 
-// histroy api  ---------------------------------------------------------------------------------------------here
+// Light Rain: 0.1 to 2.5 mm per hour
+// Moderate Rain: 2.6 to 7.5 mm per hour
+// Heavy Rain: 7.6 to 50 mm per hour
+// Very Heavy Rain: More than 50 mm per hour
