@@ -602,6 +602,10 @@ img:nth-child(3){
       .temp .c-temp{
         font-size: 3rem !important;
       }
+      .temp .c-temp::after{
+        font-size: 2rem !important;
+        right: -20px !important;
+      }
       .contry-left .rains-data {
       bottom: 24px !important;
       right: 10px !important;
@@ -610,7 +614,23 @@ img:nth-child(3){
 }
 
 
-
+@media  (min-width: 500px) and (max-width:766px) {
+  .temp .c-temp{
+    font-size: 10rem !important;
+  }
+  .temp .c-temp::after{
+    font-size: 3rem !important;
+   
+  }
+  .contry-left .rains-data {
+    bottom: 60px !important;
+    font-size: 1.2rem;
+    right: 40px !important;
+    }
+    .cloud-img{
+      width: 300px !important;
+    }
+}
 
 
 

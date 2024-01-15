@@ -3,6 +3,7 @@ let _tomorrow = [];
 let navElement  = document.querySelectorAll('#myNavbar li');
 const loadingIndicator = document.getElementById("loadingIndicator");
 
+
 let currentTime;
 // get the data from the api
 const getData = async (location, geo) => {
@@ -335,7 +336,8 @@ daysRow.forEach(e =>e.addEventListener('click',function(){
   document.querySelector('.location').innerHTML = heat_map;
   currentTime=getCurrentTimeFormatted(data.location.localtime);
 
-  getArray()
+  getArray();
+  rainy_countrys(data.forecast.forecastday[0].day.totalprecip_mm);
 }
 
 
@@ -531,9 +533,6 @@ function calculateAQI(co, no2, o3, so2, pm25, pm10) {
 
     return overallAQI;
   }
-function rainy_countrys(totalpre){
- 
-}
 
 
 
