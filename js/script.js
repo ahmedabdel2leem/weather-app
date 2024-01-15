@@ -336,7 +336,8 @@ daysRow.forEach(e =>e.addEventListener('click',function(){
   document.querySelector('.location').innerHTML = heat_map;
   currentTime=getCurrentTimeFormatted(data.location.localtime);
 
-  getArray()
+  getArray();
+  rainy_countrys(data.forecast.forecastday[0].day.totalprecip_mm);
 }
 
 
@@ -533,7 +534,13 @@ function calculateAQI(co, no2, o3, so2, pm25, pm10) {
     return overallAQI;
   }
 function rainy_countrys(totalpre){
- 
+  if (totalpre >=2.5) {
+      document.querySelector('#meduim').classList.remove('d-none')
+      document.querySelector('#small').classList.remove('d-none')
+  }else{
+     document.querySelector('#meduim').classList.add('d-none')
+      document.querySelector('#small').classList.add('d-none')
+  }
 }
 
 
