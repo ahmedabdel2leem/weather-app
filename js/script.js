@@ -2,7 +2,7 @@ let data = [];
 let _tomorrow = [];
 let navElement  = document.querySelectorAll('#myNavbar li');
 const loadingIndicator = document.getElementById("loadingIndicator");
-
+const buttons = document.querySelectorAll('.pre .prec');
 
 let currentTime;
 // get the data from the api
@@ -533,6 +533,15 @@ function calculateAQI(co, no2, o3, so2, pm25, pm10) {
 
     return overallAQI;
   }
+function rainy_countrys(totalpre){
+  if (totalpre >=2.5) {
+      document.querySelector('#meduim').classList.remove('d-none')
+      document.querySelector('#small').classList.remove('d-none')
+  }else{
+     document.querySelector('#meduim').classList.add('d-none')
+      document.querySelector('#small').classList.add('d-none')
+  }
+}
 
 
 
