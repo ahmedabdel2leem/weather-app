@@ -176,12 +176,12 @@ ${data.location.name}
 <div class="col-12 col-lg-8 next">
 <div class="row g-1 mt-lg-4 mt-5">
   <div  class="col-md-6 col-lg-3 text-white">
-    <div id='yesterday' class=" day d-flex flex-column">
+    <div   id='yesterday' class=" day d-flex flex-column">
       Yasterday
       <span>${getYesterday(data.forecast.forecastday[0].date)}</span>
     </div>
   </div>
-  <div data-index ='0'class="col-md-6 col-lg-3 active text-white">
+  <div data-index ='0' class="col-md-6 col-lg-3 active text-white">
     <div class=" day d-flex flex-column ">
       Today
       <span>${mydate(data.forecast.forecastday[0].date)}</span>
@@ -246,7 +246,7 @@ spans[0].getAttribute('data-index');
 
 let sun = document.querySelector('.sun');
 daysRow.forEach(e =>e.addEventListener('click',function(){
-  
+  console.log(e)
   daysRow.forEach(j => j.classList.remove('active'))
   for (let i = 0; i < spans.length; i++) {
     if(e.getAttribute('data-index') == i){
@@ -273,7 +273,7 @@ daysRow.forEach(e =>e.addEventListener('click',function(){
     <div class="col-4 ">
       <div class="cond air-quality text-white d-flex flex-column align-items-center text-center">
         <img src="images/leaf (1).png" alt="">
-        <p class="mb-0">${calculateAQI(air_quality.co,air_quality.no2,air_quality.o3,air_quality.so2,air_quality.pm2_5,air_quality.pm10)}</p>
+        <p class="mb-0">${calculateAQI(air_quality?.co,air_quality?.no2,air_quality?.o3,air_quality?.so2,air_quality?.pm2_5,air_quality?.pm10)}</p>
         <span class="text-white-50">air-quality</span>
       </div>
     </div>
